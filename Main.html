@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ID Card Generator</h1>
+        </header>
+
+        <section id="text-customization">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" name="job-title" placeholder="Enter job title">
+            </div>
+            <div class="form-group">
+                <label for="college-name">College Name:</label>
+                <input type="text" id="college-name" name="college-name" placeholder="Enter college name">
+            </div>
+            <div class="form-group">
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+
+            <div class="form-group">
+                <label for="text-color">Select Text Color:</label>
+                <input type="color" id="text-color" name="text-color" value="#000000">
+            </div>
+            <div class="form-group">
+                <label for="font-family">Select Font Family:</label>
+                <select id="font-family" name="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Palatino">Palatino</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="live-preview">
+            <h2>Live Preview</h2>
+
+            <div class="id-card" id="id-card">
+                <div class="photo"><img id="preview-photo" src="" alt="" class="photo"></div>
+                <div class="details">
+                    <h3 class="name" id="preview-name">N/A</h3>
+                    <p class="job-title" id="preview-job-title">N/A</p>
+                    <p class="college-name" id="preview-college-name">N/A</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="controls" style="display: flex;">
+            <button id="generate-output">Generate ID Card</button>
+        </section>
+
+        <section id="employee-details">
+            <h2></h2>
+            <div class="employee-list" style="display: flex;">
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</body>
+
+</html>
